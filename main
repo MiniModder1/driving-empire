@@ -1,0 +1,70 @@
+-- Creating the UI
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+-- Notification
+Rayfield:Notify({
+   Title = "RSCRIPTS.NET",
+   Content = "Visit RSCRIPTS.NET for more awesome scripts. [https://www.rscripts.net/u/vauz]",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "I Might.",
+         Callback = function()
+         print("Will You?")
+         setclipboard("https://www.rscripts.net/u/vauz")
+      end
+   },
+},
+})
+
+-- Creating the Window
+local Window = Rayfield:CreateWindow({
+   Name = "Vauz's Empire",
+   LoadingTitle = "Owned by Vauz Softworks",
+   LoadingSubtitle = "vauz#7376",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = DE,
+      FileName = "DE_Saves"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "Vauz Softworks Key System",
+      Subtitle = "Visit the Discord to get the Key.",
+      Note = "bio.link/vauzsoftworks           Visit our website for more scripts.",
+      FileName = "SiriusKey",
+      SaveKey = false,
+      GrabKeyFromSite = false,
+      Key = "123"
+   }
+})
+
+-- Creating the Tabs
+local Tab = Window:CreateTab("INFO") -- Info / Cedits
+local Tab2 = Window:CreateTab("AUTOFARM") -- Autofarm for DE
+local Tab3 = Window:CreateTab("CAR MOD") -- Car Modding
+
+-- Credits
+local Section = Tab:CreateSection("Credits")
+local Label = Tab:CreateLabel("Owned by: Vauz Softworks")
+local Label = Tab:CreateLabel("Approved by: No-one yet!")
+local Label = Tab:CreateLabel("Created by vauz#7376")
+local Label = Tab:CreateLabel("Obfuscated by: vauz#7376")
+local Label = Tab:CreateLabel("Helped by: Arditt#1544")
+
+-- Information
+local Section = Tab:CreateSection("Information")
+local Paragraph = Tab:CreateParagraph({Title = "Driving Empire", Content = "Driving Empire is a ROBLOX Driving Simulator. The more you drive the more you earn, some people are lazy like me and you so we grab autofarms. The autofarm we made, utilizes the in-game Speed Traps and your own car going at speeds of over 400+ mph to earn you the most cash possible."})
+local Button = Tab:CreateButton({
+   Name = "Go away Anti-Cheat!",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
